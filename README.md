@@ -97,7 +97,6 @@ Day 1-2 (2 days)
     API's endpoints for user registration, login, and rental space retrieval.
 
 Day 3-4 (2 days)
-    Front-end:
     Part I 
     Develop the welcome page 
     Design and implement the about page
@@ -115,6 +114,7 @@ Day 8-9 (2 days)
 
 ## Nice-to-haves
     User authentification - login/signup 
-    Calendar API
+    Account for rental spaces
+
     
 
