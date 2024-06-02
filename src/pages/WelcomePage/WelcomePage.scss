@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width: 100vw;
     text-align: center;
     background-color: black;
     
@@ -15,32 +16,34 @@
   
   .welcome-container {
     margin-bottom: 20px;
-
-    &__pic{
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-    }
   }
+
+.image__giff{
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+}
     
   .welcome-header {
-    font-size: 2em;
+    font-size: 1em;
     margin-bottom: 20px;
-    color: #333;
+    color: rgb(81, 107, 2);
+    line-height: 1.5rem;
   }
   
   .welcome-button {
     padding: 10px 20px;
     font-size: 1em;
-    color: #fff;
-    background-color: #007bff;
+    color: black;
+    background-color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
   .welcome-button:hover {
-    background-color: #0056b3;
+    background-color: rgb(171, 136, 226);
+    font-weight:800;
   }
+  
