@@ -10,13 +10,13 @@ const Header = () => {
         <img src={Logo} alt="Logo of the man pushing a mountain" className="header-img__logo" />
       </div>
       <nav className="nav-links">
-        <NavLink exact to="/" activeClassName="active-link">
+        <NavLink exact to="/" className="active-link">
           Home
         </NavLink>
-        <NavLink to="/about" activeClassName="active-link">
+        <NavLink to="/about" className="active-link">
           About
         </NavLink>
-        <NavLink to="/login" activeClassName="active-link">
+        <NavLink to="/login" className="active-link">
           Login
         </NavLink>
       </nav>
