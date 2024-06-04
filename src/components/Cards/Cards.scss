@@ -1,0 +1,68 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  &__card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0.5rem;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width:25%;
+
+    &:hover {
+      transform: scale(2.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__title {
+    font-family: "Parisienne";
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+
+  &__subheader {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #666;
+  }
+
+  &__weather {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+
+    &-info {
+      margin: 5px 0;
+    }
+  }
+
+  &__loading {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+  }
+
+  &__image-container {
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+}

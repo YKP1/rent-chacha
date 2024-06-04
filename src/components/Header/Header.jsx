@@ -10,7 +10,7 @@ const Header = () => {
         <img src={Logo} alt="Logo of the man pushing a mountain" className="header-img__logo" />
       </div>
       <nav className="nav-links">
-        <NavLink exact to="/" className="active-link">
+        <NavLink exact to="/home" className="active-link">
           Home
         </NavLink>
         <NavLink to="/about" className="active-link">

@@ -117,4 +117,3 @@ Day 8-9 (2 days)
     Account for rental spaces
 
     
-
