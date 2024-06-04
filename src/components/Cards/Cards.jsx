@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Cards.scss';
+import EurekaYogi from "../../assets/images/eurika-yogi.jpg";
+import TorontoYogi from "../../assets/images/toronto-yogi.jpg";
+import NashvilleYogi from "../../assets/images/nashville-yogi.jpg";
+import MexicoYogi from "../../assets/images/mexico-city-yogi.jpg";
 
 const TORONTO_API_URL = `https://api.openweathermap.org/data/2.5/weather?lat=43.6532&lon=-79.3832&appid=${import.meta.env.VITE_API_KEY}&units=metric`;
 const NASHVILLE_API_URL = `https://api.openweathermap.org/data/2.5/weather?lat=36.1627&lon=-86.7816&appid=${import.meta.env.VITE_API_KEY}&units=metric`;
@@ -40,7 +44,7 @@ const Cards = () => {
           <h4 className="cards__subheader">{city.subheader}</h4>
           <div className="cards__weather">
             {weatherData[city.name] ? (
-              <div>
+              <div className="cards__weather-info">
                 <p className="cards__weather-info">Current Temperature: {weatherData[city.name].main.temp}°C</p>
                 <p className="cards__weather-info">Condition: {weatherData[city.name].weather[0].description}</p>
               </div>
@@ -49,7 +53,10 @@ const Cards = () => {
             )}
           </div>
           <div className="cards__image-container">
-            <img className="cards__image" src={`/images/${city.name.toLowerCase().replace(' ', '_')}.jpg`} alt={city.name} />
+            {city.name === 'EUREKA' && <img classname="cards__image" src={EurekaYogi} alt="Yogi in winter jacket" />}
+            {city.name === 'TORONTO' && <img className="cards__image" src={TorontoYogi} alt="Yogi in light jacket" />}
+            {city.name === 'NASHVILLE' && <img className="cards__image" src={NashvilleYogi} alt="Yogi in t-shirt" />}
+            {city.name === 'MEXICO CITY' && <img className="cards__image" src={MexicoYogi} alt="Yogi without clothes" />}
           </div>
         </div>
       ))}
