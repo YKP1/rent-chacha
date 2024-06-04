@@ -5,8 +5,11 @@
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   align-items: center;
+  bottom:10rem;
+  margin-top: 10rem; 
+  padding-left: 2rem;
+  margin-bottom: 8rem;
 
   &__card {
     background: #f9f9f9;
@@ -17,7 +20,7 @@
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 25%;
+    width: 18rem;
 
     &:hover {
       transform: scale(1.05);
@@ -40,16 +43,16 @@
 
   &__weather {
     font-size: 0.9em;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
     &-info {
-      margin: 5px 0;
+      margin: 3px 0;
       background: linear-gradient(to bottom, #87ceeb, #00bfff);
       background-image: url('/images/sun.png'), linear-gradient(to bottom, #87ceeb, #00bfff);
       background-repeat: no-repeat;
       background-position: center top;
       color: white;
-      padding: 10px;
+      padding: 7px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       display: flex;
@@ -60,7 +63,7 @@
 
   &__loading {
     font-size: 0.9em;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   &__image-container {

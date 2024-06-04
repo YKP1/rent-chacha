@@ -6,22 +6,23 @@ import Logo from "../../assets/logo/MoveMountains.jpeg";
 const Header = () => {
   return (
     <header className="header">
-      <div className="header-img">
-        <img src={Logo} alt="Logo of the man pushing a mountain" className="header-img__logo" />
+      <div className="header__logo-container">
+        <img src={Logo} alt="Logo of the man pushing a mountain" className="header__logo" />
       </div>
-      <nav className="nav-links">
-        <NavLink exact to="/home" className="active-link">
+      <h1 className="header__title">Move Mountains</h1>
+      <nav className="header__nav-links">
+        <NavLink exact to="/home" className="header__nav-link" activeClassName="header__nav-link--active">
           Home
         </NavLink>
-        <NavLink to="/about" className="active-link">
+        <NavLink to="/about" className="header__nav-link" activeClassName="header__nav-link--active">
           About
         </NavLink>
-        <NavLink to="/login" className="active-link">
+        <NavLink to="/login" className="header__nav-link" activeClassName="header__nav-link--active">
           Login
         </NavLink>
       </nav>
     </header>
   );
-}
+};
 
 export default Header;
