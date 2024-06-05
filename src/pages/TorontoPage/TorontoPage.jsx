@@ -61,11 +61,6 @@ const TorontoPage = () => {
                 alt="search-icon"
               />
             </div>
-            <div className="options__button">
-              <button onClick={() => navigate("/toronto/id")}>
-                + Add New Rental
-              </button>
-            </div>
           </div>
         </div>
         <div className="toronto-container__list">
