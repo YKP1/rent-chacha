@@ -19,7 +19,7 @@ const TorontoPage = () => {
 
   const getTorontoRents = async () => {
     try {
-      const res = await axios.get(`${baseUrl}/api/toronto`); 
+      const res = await axios.get(`${baseUrl}/api/toronto`);
       setTorontoList(res.data);
     } catch (error) {
       console.log("Something went wrong!" + error);
@@ -45,7 +45,7 @@ const TorontoPage = () => {
       <div className="toronto-container">
         <div className="toronto-container__header">
           <div className="header__title">
-            <h1 className="header__title--text">Toronto Rentals</h1>
+            <h1 className="header__title--text">Toronto</h1>
           </div>
           <div className="header__options">
             <div className="options__search">
@@ -69,52 +69,6 @@ const TorontoPage = () => {
           </div>
         </div>
         <div className="toronto-container__list">
-          <div className="list__mobile-card">
-            {torontoList
-              .filter((rent) => filterBySearch(rent))
-              .map((rent) => (
-                <div className="mobile-card__container" key={rent.id}>
-                  <div className="container__row">
-                    <div className="row__column">
-                      <p className="column__title">Contact Name</p>
-                      <p className="column__value">
-                        <a
-                          onClick={() => handleTorontoSelect(rent.id)}
-                          className="element__title"
-                        >
-                          {rent.name}
-                          <img src={rightChevronIcon} alt="right-icon" />
-                        </a>
-                      </p>
-                    </div>
-                    <div className="row__column">
-                      <p className="column__title">City</p>
-                      <p className="column__value">{rent.city}</p>
-                    </div>
-                  </div>
-                  <div className="container__row">
-                    <div className="row__column">
-                      <p className="column__title">Cost per Hour</p>
-                      <p className="column__value">{rent.cost_per_hour}</p>
-                    </div>
-                    <div className="row__column">
-                      <p className="column__title">Capacity</p>
-                      <p className="column__value">{rent.capacity}</p>
-                    </div>
-                  </div>
-                  <div className="container__row">
-                    <div className="row__column">
-                      <img
-                        src={editIcon}
-                        className="column__editbtn"
-                        alt="edit-icon"
-                        onClick={() => handleTorontoSelect(rent.id)}
-                      />
-                    </div>
-                  </div>
-                </div>
-              ))}
-          </div>
           <table className="list__table" cellSpacing={0}>
             <thead>
               <tr className="table__header">
@@ -163,11 +117,22 @@ const TorontoPage = () => {
                         {rent.name}
                         <img src={rightChevronIcon} alt="right-icon" />
                       </a>
+                      <img
+                        src={rent.image}
+                        alt={rent.name}
+                        className="element__image"
+                      />
                     </td>
                     <td className="row__element column--small">{rent.city}</td>
-                    <td className="row__element column--small">{rent.cost_per_hour}</td>
-                    <td className="row__element column--small">{rent.capacity}</td>
-                    <td className="row__element column--small">{rent.venue_type}</td>
+                    <td className="row__element column--small">
+                      {rent.cost_per_hour}
+                    </td>
+                    <td className="row__element column--small">
+                      {rent.capacity}
+                    </td>
+                    <td className="row__element column--small">
+                      {rent.venue_type}
+                    </td>
                   </tr>
                 ))}
             </tbody>
