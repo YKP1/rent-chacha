@@ -4,6 +4,8 @@ import HomePage from "./pages/HomePage/HomePage";
 import TorontoPage from "./pages/TorontoPage/TorontoPage";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import TorontoIdPage from "./pages/TorontoIdPage/TorontoIdPage";
+
 // import EurekaPage from './pages/Eureka';
 // import NashvillePage from './pages/NashvillePage';
 // import MexicoCityPage from './pages/MexicoCityPage';
@@ -17,6 +19,7 @@ function App() {
         <Route path="/" element={<WelcomePage/>} />
         <Route path="/home" element={<HomePage/>} />
         <Route path="/toronto" element={<TorontoPage />} />
+        <Route path="/toronto/:torontoId" element={< TorontoIdPage />} />
         {/* <Route path="/eureka" element={<EurekaPage />} /> */}
         {/* <Route path="/nashville" element={<NashvillePage />} /> */}
         {/* <Route path="/mexico-city" element={<MexicoCityPage />}  */}

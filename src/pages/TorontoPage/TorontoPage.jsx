@@ -3,9 +3,7 @@ import "./TorontoPage.scss";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import searchIcon from "../../assets/icons/search-24px.svg";
-import editIcon from "../../assets/icons/edit-24px.svg";
 import sortIcon from "../../assets/icons/sort-24px.svg";
-import rightChevronIcon from "../../assets/icons/chevron_right-24px.svg";
 
 const TorontoPage = () => {
   const [torontoList, setTorontoList] = useState([]);
@@ -55,7 +53,7 @@ const TorontoPage = () => {
                 onChange={handleSearchInput}
                 className="search__input"
               />
-              <img
+              <img 
                 src={searchIcon}
                 className="search__icon"
                 alt="search-icon"
@@ -68,7 +66,7 @@ const TorontoPage = () => {
             <thead>
               <tr className="table__header">
                 <th>
-                  <div>
+                  <div className="table__header--name">
                     Name
                     <img src={sortIcon} alt="sort-icon" />
                   </div>
@@ -110,10 +108,9 @@ const TorontoPage = () => {
                         className="element__title"
                       >
                         {rent.name}
-                        <img src={rightChevronIcon} alt="right-icon" />
                       </a>
                       <img
-                        src={rent.image}
+                        src={`${baseUrl}/${rent.image}`}
                         alt={rent.name}
                         className="element__image"
                       />

@@ -16,7 +16,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 1.5rem;
+    padding: 1rem;
     background-image: url(../../assets/images/homepage-background-lines.jpeg);
     color: #fff;
     border-radius: 0.5rem 0.5rem 0 0;
@@ -29,6 +29,7 @@
       &--text {
         font-style: $font-header;
         margin: 0;
+        padding-left:7rem;
       }
     }
 
@@ -56,91 +57,16 @@
           box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
         }
       }
-
-      .options__button {
-        margin: 1rem;
-
-        button {
-          padding: 0.625rem 1.25rem;
-          border-radius: 1.5rem;
-          background: #ff7d29;
-          color: #fff;
-          border: none;
-          cursor: pointer;
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          transition: background 0.3s, transform 0.3s;
-
-          &:hover {
-            background: darken(#ff7d29, 10%);
-            transform: scale(1.05);
-          }
-        }
-      }
     }
   }
 
   .toronto-container__list {
-    border-radius: 0.5rem;
-    padding: 1rem;
-
-    .list__mobile-card {
-      display: block;
-
-      .mobile-card__container {
-        border-top: 1px solid $light-Grey;
-        padding: 1.5rem;
-        border-radius: 0 0 0.5rem 0.5rem;
-
-        .container__row {
-          display: flex;
-          flex-direction: column;
-
-          .row__column {
-            width: 100%;
-            margin: 0.5rem 0;
-
-            &__title {
-              color: $graphite;
-              font-weight: 600;
-              font-size: 0.875rem;
-              margin-bottom: 0.5rem;
-            }
-
-            &__value {
-              font-size: 1rem;
-              color: $graphite;
-
-              .element__title {
-                text-decoration: none;
-                cursor: pointer;
-
-                &:hover {
-                  text-decoration: underline;
-                }
-
-                img {
-                  margin-left: 0.3125rem;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
     .list__table {
       width: 100%;
       display: table;
 
       .table__header {
         th {
-          padding-bottom: 1.25rem;
-          text-align: left;
-          background: $cloud;
-          color: #fff;
-
           &:first-child {
             padding-left: 2rem;
           }
@@ -148,13 +74,11 @@
           div {
             display: flex;
             align-items: center;
-
-            img {
-              margin-left: 0.3125rem;
-              width: 1rem;
-              height: 1rem;
-            }
           }
+        }
+        
+        &--name {
+          padding-left: 12rem;
         }
       }
 
@@ -169,11 +93,8 @@
         }
 
         td {
-          padding: 0.75rem;
-          border-bottom: 1px solid $light-Grey;
-
           &:first-child {
-            padding-left: 2rem;
+            padding-left: 12rem;
           }
 
           &.column--name {
@@ -185,7 +106,6 @@
           }
 
           .element__title {
-            color: $blue-sky;
             text-decoration: none;
             cursor: pointer;
 
@@ -201,17 +121,13 @@
           .element__image {
             margin-top: 0.625rem;
             width: 6.25rem;
-            height: auto;
-            display: block;
-          }
-
-          .element__actions {
+            height: 6.25rem;
             display: flex;
-            align-items: center;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
 
-            img {
-              width: 1.5rem;
-              height: 1.5rem;
+            &:hover {
+              transform: scale(6.1);
             }
           }
         }
