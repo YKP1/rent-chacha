@@ -10,8 +10,6 @@
     height: 100vh;
     width: 100vw;
     text-align: center;
-    background-color: black;
-    
   }
   
   .welcome-container {
@@ -22,12 +20,13 @@
     width: 10rem;
     height: 10rem;
     object-fit: cover;
+    border-radius: 50%;
 }
     
   .welcome-header {
     font-size: 1em;
     margin-bottom: 20px;
-    color: rgb(81, 107, 2);
+    color:black;
     line-height: 1.5rem;
   }
   

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import arrowBack from "../../assets/icons/arrow_back-24px.svg";
+import MapContainer from "../../components/MapContainer/MapContainer";
 
 const TorontoIdPage = () => {
   const { torontoId } = useParams();
@@ -35,6 +36,14 @@ const TorontoIdPage = () => {
     return <div>Loading...</div>;
   }
 
+  const openDeleteModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeDeleteModal = () => {
+    setModalOpen(false);
+  };
+  
   return (
     <section className="details">
       <div className="details__header">
@@ -54,12 +63,15 @@ const TorontoIdPage = () => {
             alt="picture of the space"
           />
         </div>
-        <div>
-        </div>
         <div className="details__container--text">
-          <h4 className="details__container--subtext">Cost per Hour: {torontoList.cost_per_hour}</h4>
-          <h4 className="details__container--subtext">Capacity: {torontoList.capacity}</h4>
+          <h4>Cost per Hour: {torontoList.cost_per_hour}</h4>
+          <h4>Capacity: {torontoList.capacity}</h4>
+          <button onClick={() => openDeleteModal()} className="details__container--text button">Book It - Chase the Experience</button>
         </div>
+      </div>
+      <div className="map-container">
+        <h2>Map</h2>
+        <MapContainer torontoList={torontoList}/>
       </div>
     </section>
   );
