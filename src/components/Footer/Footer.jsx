@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__content">
-        <p>&copy; 2024 Move Mountains. All rights are.</p>
+        <p>&copy; 2024 Move Mountains. All rights are here.</p>
         <nav className="footer__nav-links">
           <h4 className="footer__nav-link">Contact:</h4>
           <p>250 Wishes Street</p>

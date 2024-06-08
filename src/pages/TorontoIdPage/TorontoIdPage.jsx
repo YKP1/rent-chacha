@@ -4,11 +4,13 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import arrowBack from "../../assets/icons/arrow_back-24px.svg";
 import MapContainer from "../../components/MapContainer/MapContainer";
+import BookButton from "../../components/BookButton/BookButton";
 
 const TorontoIdPage = () => {
   const { torontoId } = useParams();
   const [torontoList, setTorontoList] = useState(null);
   const [error, setError] = useState(null);
+  const [modalOpen, setModalOpen] = useState(false);
   const navigate = useNavigate();
   const baseUrl = import.meta.env.VITE_BASE_URL;
 
@@ -43,7 +45,7 @@ const TorontoIdPage = () => {
   const closeDeleteModal = () => {
     setModalOpen(false);
   };
-  
+
   return (
     <section className="details">
       <div className="details__header">
@@ -66,12 +68,24 @@ const TorontoIdPage = () => {
         <div className="details__container--text">
           <h4>Cost per Hour: {torontoList.cost_per_hour}</h4>
           <h4>Capacity: {torontoList.capacity}</h4>
-          <button onClick={() => openDeleteModal()} className="details__container--text button">Book It - Chase the Experience</button>
+          <button
+            onClick={openDeleteModal}
+            className="details__container--text button"
+          >
+            Book It - Chase the Experience
+          </button>
+          {modalOpen && (
+            <BookButton
+              onSubmit={closeDeleteModal}
+              onCancel={closeDeleteModal}
+              onClose={closeDeleteModal}
+            />
+          )}
         </div>
       </div>
       <div className="map-container">
         <h2>Map</h2>
-        <MapContainer torontoList={torontoList}/>
+        <MapContainer torontoList={torontoList} />
       </div>
     </section>
   );
