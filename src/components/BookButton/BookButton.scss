@@ -12,6 +12,7 @@
   background-color: rgba(0, 0, 0, 0.678);
   height: 100%;
   width: 100%;
+  z-index: 1000;
 
   &__modal {
     display: flex;

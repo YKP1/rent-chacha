@@ -66,13 +66,35 @@ const TorontoIdPage = () => {
           />
         </div>
         <div className="details__container--text">
-          <h4>Cost per Hour: {torontoList.cost_per_hour}</h4>
-          <h4>Capacity: {torontoList.capacity}</h4>
+          <h4>
+            <strong>Cost per Hour:</strong> {torontoList.cost_per_hour}
+          </h4>
+          <h4>
+            <strong>Capacity:</strong> {torontoList.capacity}
+          </h4>
+          <h4>
+            <strong>Address:</strong> {torontoList.address}
+          </h4>
+          <h4>
+            <strong>Equipment:</strong> {torontoList.equipment}
+          </h4>
+          <h4>
+            <strong>Parking:</strong> {torontoList.parking}
+          </h4>
+          <h4>
+            <strong>Room layout:</strong> {torontoList.room_layout}
+          </h4>
+          <h4>
+            <strong>Catering options:</strong> {torontoList.catering_options}
+          </h4>
+          <h4>
+            <strong>Restrictions:</strong> {torontoList.restrictions}
+          </h4>
           <button
             onClick={openDeleteModal}
             className="details__container--text button"
           >
-            Book It - Chase the Experience
+            READY TO ROLL?
           </button>
           {modalOpen && (
             <BookButton
@@ -82,9 +104,6 @@ const TorontoIdPage = () => {
             />
           )}
         </div>
-      </div>
-      <div className="map-container">
-        <h2>Map</h2>
         <MapContainer torontoList={torontoList} />
       </div>
     </section>

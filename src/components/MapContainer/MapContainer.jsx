@@ -14,7 +14,7 @@ const MapContainer = ({ torontoList }) => {
       />
       <Marker position={[torontoList.latitude, torontoList.longitude]}>
         <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
+          You can be here. <br /> Easily.
         </Popup>
       </Marker>
     </Mc>

@@ -3,6 +3,7 @@
 @use "../../styles/partials/mixins" as *;
 
   .leaflet-container{
-    height:300px;
-    width:50vw;
+    height:150px;
+    top: 4rem;
+    width:45vw;
   }
