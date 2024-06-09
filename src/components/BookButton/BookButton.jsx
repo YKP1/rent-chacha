@@ -17,6 +17,17 @@ export default function BookButton({ onSubmit, onCancel, onClose }) {
       return;
     }
 
+    try {
+      onSubmit({ title, contact });
+      setErrorMessage("");
+      alert("Good job! Submitted successfully! We will be in touch.");
+      navigate("/"); 
+    } catch (error) {
+      setErrorMessage(
+        error.response?.data || "An error occurred. Please try again."
+      );
+    }
+  };
 
   const handleCancel = () => {
     if (onCancel) {
