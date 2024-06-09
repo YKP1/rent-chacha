@@ -4,12 +4,15 @@
 
 .toronto-main {
   width: 100%;
-  border-radius: 0.5rem;
   position: relative;
   margin: 6rem auto;
-  background: #fff;
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
   padding: 2rem;
+
+  .toronto-container {
+    border: .0625rem solid $yellow;
+    border-radius: 0.5rem;
+  }
 
   .toronto-container__header {
     display: flex;
@@ -17,7 +20,8 @@
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    background-image: url(../../assets/images/homepage-background-lines.jpeg);
+    background-image: url(../../assets/images/homepage-background-mountains.jpeg);
+    background-position: center left;
     color: #fff;
     border-radius: 0.5rem 0.5rem 0 0;
 
@@ -29,7 +33,7 @@
       &--text {
         font-family: $font-header;
         margin: 0;
-        padding-left:7rem;
+        padding-left: 8rem;
       }
     }
 
@@ -52,9 +56,8 @@
         .search__input {
           width: 100%;
           border-radius: 1.5rem;
-          padding: 0.625rem 0.75rem;
-          border: 1px solid $graphite;
-          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+          padding: 0.625rem 3rem;
+          border: 0.0625rem solid $graphite;
         }
       }
     }
@@ -76,17 +79,13 @@
             align-items: center;
           }
         }
-        
+
         &--name {
-          padding-left: 12rem;
+          padding-left: 5rem;
         }
       }
 
       .table__row {
-        &:nth-child(even) {
-          background-color: lighten($green, 40%);
-        }
-
         &:hover {
           background-color: $blue-sky;
           color: #fff;
@@ -94,11 +93,12 @@
 
         td {
           &:first-child {
-            padding-left: 12rem;
+            padding-left: 5rem;
           }
 
           &.column--name {
-            width: 50%;
+            width: 25%;
+            padding-bottom: 1rem;
           }
 
           &.column--small {
@@ -127,14 +127,9 @@
             transition: transform 0.3s ease;
 
             &:hover {
-              transform: scale(6.1);
+              transform: scale(3.1);
             }
           }
-        }
-
-        .column__editbtn {
-          cursor: pointer;
-          margin-left: 0.625rem;
         }
       }
     }

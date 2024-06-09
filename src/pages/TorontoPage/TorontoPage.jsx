@@ -53,7 +53,7 @@ const TorontoPage = () => {
                 onChange={handleSearchInput}
                 className="search__input"
               />
-              <img 
+              <img
                 src={searchIcon}
                 className="search__icon"
                 alt="search-icon"
