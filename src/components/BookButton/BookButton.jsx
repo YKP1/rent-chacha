@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import closeIcon from "../../assets/icons/close-24px.svg";
+import AnimatedLogo from "../../assets/logo/animated-logo.gif";
 import "./BookButton.scss";
 
 export default function BookButton({ onSubmit, onCancel, onClose }) {
@@ -21,7 +22,7 @@ export default function BookButton({ onSubmit, onCancel, onClose }) {
       onSubmit({ title, contact });
       setErrorMessage("");
       alert("Good job! Submitted successfully! We will be in touch.");
-      navigate("/"); 
+      navigate("/");
     } catch (error) {
       setErrorMessage(
         error.response?.data || "An error occurred. Please try again."

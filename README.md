@@ -1,24 +1,22 @@
-# Rent ChaCha
+# MoveMountains
 
 ## Overview
 
-A platform for freelance yoga/pilates/marital arts instructors to seacrh rental spaces worldwide. 
+MoveMountains is a motivational platform designed for freelancers such as yoga, pilates, and martial arts instructors to search for rental spaces worldwide. The platform provides a comprehensive database of churches, temples, and rental studios with price points for online bookings, enabling freelancers to increase productivity by coordinating private classes, building schedules in advance, and traveling the world.
 
 ### Problem
 
-A worldwide database of churches, temples, rental studios with price points for online bookings to increase productivity for freelancers who coordinates private classes to build schedule in advance and travel the world. 
+Freelance instructors often face challenges in finding suitable rental spaces for their classes. MoveMountains solves this problem by offering a worldwide database of rental spaces, complete with price points and online booking capabilities. This allows instructors to plan their schedules in advance and ensure they choose high-quality locations for their clients.
 
 ### User Profile
 
-Made for freelancers. They will be loggining to the website in order to proceed with bookings. 
+MoveMountains is tailored for freelance instructors who need reliable and convenient rental spaces. They can create accounts, log in, and proceed with bookings through the website.
 
 ### Features
 
-As a freelance instructor,
-I want to create an account and log in,
-So that I can access the platform's features and make bookings.
-I want to choose the country I want to go to, navigate to the city,
-search for a location with good reviews as it is important for my business to not disappoint clients with the chosen location.
+As a freelance instructor:
+I want to create an account and log in, so that I can access the platform's features and make bookings.
+I want to choose the country I want to go to, navigate to the city, search for a location with good reviews as it is important for my business to not disappoint clients with the chosen location.
 After booking, I am able to leave a review for the rental space.
 
 ## Implementation
@@ -27,26 +25,24 @@ After booking, I am able to leave a review for the rental space.
 
 Frontend: React.js
 Backend: Node.js, Express.js,
-APIs (GET, POST)
-Authentication
-2 user profiles (instructors and rental places)
+APIs: Google Maps API for maps, geolocation, and place information
+Database: MySQL for storing rental spaces and user data
 
 ### APIs
 
-Google Maps API: Maps, geolocation, place information.
+Google Maps API: Provides maps, geolocation, and place information.
 
 
 ### Sitemap
 
 - Welcome Page
-    - questionaire to excite for the website entry;
+    - questionaire to excite for the website entry
 
 - About Page
-    -  moto and mission to unite 
+    -  Moto and mission to unite instructors and rental spaces
 
 - Home Page 
     - overview of spaces by cities 
-    - sign up/log in (maybe)
     - contact us
 
 - City Rentals Page
@@ -73,12 +69,8 @@ Rental Spaces:
 
 ### Endpoints
 
-POST method: user email, user password, making the booking, review for the rental space 
-GET method: rental spaces, retrieve booking 
-
-useParams for rental space ID 
-useState for fetching and manipulating with data
-useAxios 
+POST: User email, user password, make a booking, review for the rental space.
+GET: Rental spaces, retrieve bookings.
 
 
 ### Auth
@@ -114,6 +106,6 @@ Day 8-9 (2 days)
 
 ## Nice-to-haves
     User authentification - login/signup 
-    Account for rental spaces
+    Separate accounts for rental space providers
 
     

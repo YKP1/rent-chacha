@@ -13,9 +13,7 @@ const Header = () => {
           className="header__logo"
         />
       </div>
-      <Link to="/home">
         <h1 className="header__title">MoveMountains</h1>
-      </Link>
       <nav className="header__nav-links">
         <Link to="/home" className="header__nav-link">
           Home
