@@ -3,7 +3,6 @@ import "./TorontoPage.scss";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import searchIcon from "../../assets/icons/search-24px.svg";
-import sortIcon from "../../assets/icons/sort-24px.svg";
 
 const TorontoPage = () => {
   const [torontoList, setTorontoList] = useState([]);
@@ -40,22 +39,24 @@ const TorontoPage = () => {
 
   return (
     <main className="toronto-main">
+      <div className="toronto-hero">
+        <div className="toronto-hero__overlay">
+          <h1 className="toronto-hero__title"><span>Toronto </span>believes in you</h1>
+        </div>
+      </div>
       <div className="toronto-container">
         <div className="toronto-container__header">
-          <div className="header__title">
-            <h1 className="header__title--text">Toronto</h1>
-          </div>
-          <div className="header__options">
+          <div className="toronto-container__header--options">
             <div className="options__search">
               <input
                 placeholder="Search..."
                 value={searchInput}
                 onChange={handleSearchInput}
-                className="search__input"
+                className="options__search--input"
               />
               <img
                 src={searchIcon}
-                className="search__icon"
+                className="options__search--icon"
                 alt="search-icon"
               />
             </div>
@@ -65,34 +66,29 @@ const TorontoPage = () => {
           <table className="list__table" cellSpacing={0}>
             <thead>
               <tr className="table__header">
-                <th>
-                  <div className="table__header--name">
+                <th className="table__header-cell">
+                  <div className="table__header-content">
                     Name
-                    <img src={sortIcon} alt="sort-icon" />
                   </div>
                 </th>
-                <th>
-                  <div>
+                <th className="table__header--cell">
+                  <div className="table__header-content">
                     City
-                    <img src={sortIcon} alt="sort-icon" />
                   </div>
                 </th>
-                <th>
-                  <div>
+                <th className="table__header-cell">
+                  <div className="table__header-content">
                     Cost Per Hour
-                    <img src={sortIcon} alt="sort-icon" />
                   </div>
                 </th>
-                <th>
-                  <div>
+                <th className="table__header-cell">
+                  <div className="table__header-content">
                     Capacity
-                    <img src={sortIcon} alt="sort-icon" />
                   </div>
                 </th>
-                <th>
-                  <div>
+                <th className="table__header-cell">
+                  <div className="table__header-content">
                     Venue Type
-                    <img src={sortIcon} alt="sort-icon" />
                   </div>
                 </th>
               </tr>
@@ -102,27 +98,29 @@ const TorontoPage = () => {
                 .filter((rent) => filterBySearch(rent))
                 .map((rent) => (
                   <tr className="table__row" key={rent.id}>
-                    <td className="row__element column--name">
+                    <td className="table__cell table__cell--name">
                       <a
                         onClick={() => handleTorontoSelect(rent.id)}
-                        className="element__title"
+                        className="table__link"
                       >
                         {rent.name}
                       </a>
                       <img
                         src={`${baseUrl}/${rent.image}`}
                         alt={rent.name}
-                        className="element__image"
+                        className="table__image"
                       />
                     </td>
-                    <td className="row__element column--small">{rent.city}</td>
-                    <td className="row__element column--small">
+                    <td className="table__cell table__cell--small">
+                      {rent.city}
+                    </td>
+                    <td className="table__cell table__cell--small">
                       {rent.cost_per_hour}
                     </td>
-                    <td className="row__element column--small">
+                    <td className="table__cell table__cell--small">
                       {rent.capacity}
                     </td>
-                    <td className="row__element column--small">
+                    <td className="table__cell table__cell--small">
                       {rent.venue_type}
                     </td>
                   </tr>
